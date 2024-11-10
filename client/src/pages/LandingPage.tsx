@@ -12,7 +12,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <main className="container mx-auto px-4">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
         <Hero />
         <Problem />
         <Process />
@@ -20,8 +20,8 @@ export default function LandingPage() {
         <Booking />
       </main>
 
-      <footer className="bg-muted mt-20 py-8">
-        <div className="container mx-auto px-4 text-center text-muted-foreground">
+      <footer className="bg-muted mt-32 py-12">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-muted-foreground">
           <p>© 2024 Your Company. All rights reserved.</p>
         </div>
       </footer>

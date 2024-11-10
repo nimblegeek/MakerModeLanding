@@ -25,10 +25,10 @@ export default function Navigation() {
 
   return (
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <span className="text-xl font-bold">Company</span>
+            <span className="text-xl font-semibold">Company</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -38,14 +38,14 @@ export default function Navigation() {
                 key={item.label}
                 variant="ghost"
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground/80 hover:text-foreground"
+                className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 {item.label}
               </Button>
             ))}
             <Button
               onClick={() => scrollToSection("#booking")}
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              className="bg-primary/90 text-primary-foreground hover:bg-primary"
             >
               Book a Call
             </Button>
@@ -56,24 +56,24 @@ export default function Navigation() {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
               <SheetContent>
-                <div className="flex flex-col space-y-4 mt-8">
+                <div className="flex flex-col space-y-6 mt-8">
                   {navItems.map((item) => (
                     <Button
                       key={item.label}
                       variant="ghost"
                       onClick={() => scrollToSection(item.href)}
-                      className="w-full justify-start"
+                      className="w-full justify-center text-lg"
                     >
                       {item.label}
                     </Button>
                   ))}
                   <Button
                     onClick={() => scrollToSection("#booking")}
-                    className="w-full"
+                    className="w-full text-lg"
                   >
                     Book a Call
                   </Button>
