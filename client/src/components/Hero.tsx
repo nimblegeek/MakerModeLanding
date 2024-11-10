@@ -13,19 +13,19 @@ export default function Hero() {
           className="space-y-8"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-            Transform Your Business With Our Solutions
+            A developer agency with an edge
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            We help businesses scale their operations through innovative solutions
-            and proven strategies. Get started today and see the difference.
+            Build and ship your project in days, not months. Go from idea to
+            launch fast and hassle free, without overspending your budget
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto text-lg"
               onClick={() => {
-                const bookingSection = document.getElementById('booking');
-                bookingSection?.scrollIntoView({ behavior: 'smooth' });
+                const bookingSection = document.getElementById("booking");
+                bookingSection?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               Get Started <ArrowRight className="ml-2 h-5 w-5" />
@@ -35,8 +35,8 @@ export default function Hero() {
               variant="outline"
               className="w-full sm:w-auto text-lg"
               onClick={() => {
-                const processSection = document.getElementById('process');
-                processSection?.scrollIntoView({ behavior: 'smooth' });
+                const processSection = document.getElementById("process");
+                processSection?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               Learn More

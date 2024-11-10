@@ -28,7 +28,7 @@ export default function Navigation() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <span className="text-xl font-semibold">Company</span>
+            <span className="text-xl font-semibold">Maker Mode</span>
           </div>
 
           {/* Desktop Navigation */}
