@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -13,7 +13,8 @@ const plans = [
       "Up to 5 users",
       "Basic reporting",
       "Email support"
-    ]
+    ],
+    scheduleLink: "https://cal.com/maker-mode/starter-consultation"
   },
   {
     name: "Professional",
@@ -26,7 +27,8 @@ const plans = [
       "Priority support",
       "Custom integrations"
     ],
-    popular: true
+    popular: true,
+    scheduleLink: "https://cal.com/maker-mode/professional-consultation"
   },
   {
     name: "Enterprise",
@@ -38,7 +40,8 @@ const plans = [
       "Custom solutions",
       "24/7 support",
       "Dedicated account manager"
-    ]
+    ],
+    scheduleLink: "https://cal.com/maker-mode/enterprise-consultation"
   }
 ];
 
@@ -98,17 +101,24 @@ export default function Pricing() {
                       </li>
                     ))}
                   </ul>
-                  <Button
-                    className={`w-full ${plan.popular ? 'bg-primary hover:bg-primary/90' : ''}`}
-                    variant={plan.popular ? "default" : "outline"}
-                    size="lg"
-                    onClick={() => {
-                      const faqSection = document.getElementById("faq");
-                      faqSection?.scrollIntoView({ behavior: "smooth" });
-                    }}
-                  >
-                    Get Started
-                  </Button>
+                  <div className="space-y-3">
+                    <Button
+                      className={`w-full ${plan.popular ? 'bg-primary hover:bg-primary/90' : ''}`}
+                      variant={plan.popular ? "default" : "outline"}
+                      size="lg"
+                    >
+                      Get Started
+                    </Button>
+                    <a 
+                      href={plan.scheduleLink}
+                      className="flex items-center justify-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Calendar className="h-4 w-4" />
+                      Schedule a consultation
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
