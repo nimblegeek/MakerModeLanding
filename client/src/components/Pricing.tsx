@@ -102,17 +102,13 @@ export default function Pricing() {
                     className={`w-full ${plan.popular ? 'bg-primary hover:bg-primary/90' : ''}`}
                     variant={plan.popular ? "default" : "outline"}
                     size="lg"
+                    onClick={() => {
+                      const faqSection = document.getElementById("faq");
+                      faqSection?.scrollIntoView({ behavior: "smooth" });
+                    }}
                   >
                     Get Started
                   </Button>
-                  <a 
-                    href="https://cal.com/your-organization/consultation" 
-                    className="block text-sm text-muted-foreground text-center mt-4 hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    or schedule a call
-                  </a>
                 </CardContent>
               </Card>
             </motion.div>

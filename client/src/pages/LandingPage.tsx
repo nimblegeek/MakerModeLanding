@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import Problem from "../components/Problem";
 import Process from "../components/Process";
 import Pricing from "../components/Pricing";
-import Booking from "../components/Booking";
+import FAQ from "../components/FAQ";
 import { Button } from "@/components/ui/button";
 
 export default function LandingPage() {
@@ -17,7 +17,7 @@ export default function LandingPage() {
         <Problem />
         <Process />
         <Pricing />
-        <Booking />
+        <FAQ />
       </main>
 
       <footer className="bg-muted mt-32 py-12">

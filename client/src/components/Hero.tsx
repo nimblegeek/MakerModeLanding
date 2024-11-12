@@ -24,11 +24,11 @@ export default function Hero() {
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto text-lg"
               onClick={() => {
-                const bookingSection = document.getElementById("booking");
-                bookingSection?.scrollIntoView({ behavior: "smooth" });
+                const pricingSection = document.getElementById("pricing");
+                pricingSection?.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              Get Started <ArrowRight className="ml-2 h-5 w-5" />
+              View Pricing <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
               size="lg"

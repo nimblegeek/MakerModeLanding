@@ -21,12 +21,10 @@ export default function Problem() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold">
-            The Problem We Solve
+            Stuck in long development cycles?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Businesses today face unprecedented challenges in scaling their
-            operations. Our solution provides the tools and expertise you need to
-            overcome these obstacles.
+          We help small businesses and startups ship fast without overspending on their budget.
           </p>
         </motion.div>
 
@@ -57,14 +55,14 @@ export default function Problem() {
             className="grid gap-6"
           >
             <Card className="p-8">
-              <h3 className="text-xl font-semibold mb-4">Before Our Solution</h3>
+              <h3 className="text-xl font-semibold mb-4">Before Maker Mode</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Manual processes, inefficient workflows, and lost opportunities
                 holding back your growth.
               </p>
             </Card>
             <Card className="p-8 bg-primary text-primary-foreground">
-              <h3 className="text-xl font-semibold mb-4">After Our Solution</h3>
+              <h3 className="text-xl font-semibold mb-4">After Maker Mode</h3>
               <p className="text-primary-foreground/90 leading-relaxed">
                 Automated workflows, streamlined operations, and maximized revenue
                 potential.

@@ -12,6 +12,7 @@ const navItems = [
   { label: "Solutions", href: "#problem" },
   { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Navigation() {
@@ -43,12 +44,6 @@ export default function Navigation() {
                 {item.label}
               </Button>
             ))}
-            <Button
-              onClick={() => scrollToSection("#booking")}
-              className="bg-primary/90 text-primary-foreground hover:bg-primary"
-            >
-              Book a Call
-            </Button>
           </div>
 
           {/* Mobile Navigation */}
@@ -71,12 +66,6 @@ export default function Navigation() {
                       {item.label}
                     </Button>
                   ))}
-                  <Button
-                    onClick={() => scrollToSection("#booking")}
-                    className="w-full text-lg"
-                  >
-                    Book a Call
-                  </Button>
                 </div>
               </SheetContent>
             </Sheet>
