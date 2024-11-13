@@ -6,7 +6,7 @@ export default {
   theme: {
   	extend: {
       fontFamily: {
-        sans: ['Consolas', 'Monaco', 'Courier New', 'monospace'],
+        sans: ['Circular', 'system-ui', 'sans-serif'],
       },
   		borderRadius: {
   			lg: 'var(--radius)',

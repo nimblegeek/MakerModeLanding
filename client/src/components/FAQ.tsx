@@ -21,7 +21,7 @@ export default function FAQ() {
         <Accordion type="single" collapsible className="max-w-3xl mx-auto">
           <AccordionItem value="item-1">
             <AccordionTrigger>
-              How long does it typically take to complete a project?
+              What is ?
             </AccordionTrigger>
             <AccordionContent>
               Project timelines vary based on complexity, but we typically deliver MVPs within 2-4 weeks. 
