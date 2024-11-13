@@ -11,20 +11,20 @@ const benefits = [
 
 export default function Problem() {
   return (
-    <section id="problem" className="py-20">
+    <section id="problem" className="py-16">
       <div className="flex flex-col items-center max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold">
             Stuck in long development cycles?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-          We help small businesses and startups ship fast without overspending on their budget.
+            We help small businesses and startups ship fast without overspending on their budget.
           </p>
         </motion.div>
 

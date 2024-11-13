@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="py-20 md:py-32">
+    <section className="py-16 md:py-24">
       <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
