@@ -21,67 +21,73 @@ export default function FAQ() {
         <Accordion type="single" collapsible className="max-w-3xl mx-auto">
           <AccordionItem value="item-1">
             <AccordionTrigger>
-              What is ?
+              Why wouldn't I hire a full-time developer?
             </AccordionTrigger>
             <AccordionContent>
-              Project timelines vary based on complexity, but we typically deliver MVPs within 2-4 weeks. 
-              Full-scale projects usually take 1-3 months. We'll provide a detailed timeline during our 
-              initial consultation based on your specific requirements.
+              To start with, the average yearly cost of a full-time senior
+              full-stack developer now exceeds €140,000 plus benefits (and good
+              luck finding one available). Aside from that, you may not always
+              have enough work to keep them busy at all times, so you're stuck
+              paying for time you aren't able to utilize. With the monthly plan,
+              you can pause and resume your subscription as often as you need to
+              ensure you're only paying your developer when you have work
+              available for them.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-2">
-            <AccordionTrigger>
-              What technologies do you work with?
-            </AccordionTrigger>
+            <AccordionTrigger>Can I cancel or get a refund?</AccordionTrigger>
             <AccordionContent>
-              We specialize in modern web technologies including React, Next.js, TypeScript, Node.js, 
-              and various cloud platforms (AWS, Google Cloud, Azure). We're also experienced with mobile 
-              development using React Native and native technologies.
+              Yes. You will never pay for something you are not happy with. Once
+              enrolled you can cancel or pause anytime. According to your needs.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-3">
-            <AccordionTrigger>
-              How do you handle project pricing?
-            </AccordionTrigger>
+            <AccordionTrigger>Who are the developers?</AccordionTrigger>
             <AccordionContent>
-              We offer transparent, value-based pricing with clear milestones. After understanding your 
-              requirements, we provide a detailed proposal with fixed pricing. We also offer flexible 
-              payment terms to accommodate different budget needs.
+              MakerMode is an agency of one. This means you work directly with
+              me. This might mean that I will have a lot to do from time to time
+              leading to longer response times. But no requests will take more
+              than 48 hours to get feedback on. But it also mean no long email
+              threads with consultant brokers, no boring meetings with
+              procurement departments or long administrative processes and
+              manager meetings. Just direct dialogue with me, Jonas.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-4">
             <AccordionTrigger>
-              Do you provide ongoing support after project completion?
+              What tools and stacks do you use?
             </AccordionTrigger>
             <AccordionContent>
-              Yes, we offer various maintenance and support packages to ensure your project continues 
-              to run smoothly after launch. This includes bug fixes, security updates, and feature 
-              enhancements as needed.
+              I use Replit for building and deploying apps. But in general I use
+              a lot of tools depending on the complexity. I try to keep it
+              simple. I have a go-to stack for most projects, but I am also
+              happy to use whatever tools and frameworks needed for each
+              project. Most web apps are built using React.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-5">
             <AccordionTrigger>
-              Can you help with an existing project?
+              Is there any projects you don't do?
             </AccordionTrigger>
             <AccordionContent>
-              Absolutely! We have extensive experience in taking over existing projects, performing code 
-              audits, and implementing improvements. We'll carefully review your current codebase and 
-              propose the best path forward.
+              I don't do AI apps, 3D modelling, game- or animation projects for
+              example. Also, I claim the right to say no to any requests that
+              may violate my foundational values.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-6">
             <AccordionTrigger>
-              What is your development process like?
+              What if I only have a single request?
             </AccordionTrigger>
             <AccordionContent>
-              We follow an agile methodology with weekly sprints and regular client check-ins. Our 
-              process includes thorough planning, continuous integration/deployment, rigorous testing, 
-              and comprehensive documentation to ensure high-quality deliverables.
+              No problem. You can pause your subscription when finished and
+              return when you have additional requests and needs. There's no
+              need to let the remainder of your subscription go to waste.
             </AccordionContent>
           </AccordionItem>
 
@@ -90,9 +96,9 @@ export default function FAQ() {
               Do you sign NDAs and protect intellectual property?
             </AccordionTrigger>
             <AccordionContent>
-              Yes, we take intellectual property very seriously. We sign NDAs before detailed project 
-              discussions and ensure all code and assets developed during the project belong exclusively 
-              to our clients.
+              Yes, we take intellectual property very seriously. We sign NDAs
+              before detailed project discussions and ensure all code and assets
+              developed during the project belong exclusively to our clients.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
