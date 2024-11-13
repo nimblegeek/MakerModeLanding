@@ -90,17 +90,6 @@ export default function FAQ() {
               need to let the remainder of your subscription go to waste.
             </AccordionContent>
           </AccordionItem>
-
-          <AccordionItem value="item-7">
-            <AccordionTrigger>
-              Do you sign NDAs and protect intellectual property?
-            </AccordionTrigger>
-            <AccordionContent>
-              Yes, we take intellectual property very seriously. We sign NDAs
-              before detailed project discussions and ensure all code and assets
-              developed during the project belong exclusively to our clients.
-            </AccordionContent>
-          </AccordionItem>
         </Accordion>
       </div>
     </section>
