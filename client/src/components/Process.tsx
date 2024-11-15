@@ -9,19 +9,25 @@ import {
 const steps = [
   {
     title: "Discovery Call",
-    description: "We start with a comprehensive assessment of your business needs and goals through a personalized consultation.",
-    details: "During this 30-minute call, we'll discuss your current challenges, objectives, and how our solution can help you achieve your goals."
+    description:
+      "We start with a comprehensive assessment of your business needs and goals through a personalized consultation.",
+    details:
+      "During this 30-minute call, we'll discuss your current challenges, objectives, and how our solution can help you achieve your goals.",
   },
   {
     title: "Custom Strategy",
-    description: "Our team develops a tailored strategy based on your specific requirements and industry best practices.",
-    details: "We analyze your business processes, identify optimization opportunities, and create a detailed implementation plan."
+    description:
+      "Our team develops a tailored strategy based on your specific requirements and industry best practices.",
+    details:
+      "We analyze your business processes, identify optimization opportunities, and create a detailed implementation plan.",
   },
   {
     title: "Implementation",
-    description: "We guide you through a smooth implementation process with dedicated support every step of the way.",
-    details: "Our expert team handles the technical setup, training, and ensures a seamless transition to the new system."
-  }
+    description:
+      "We guide you through a smooth implementation process with dedicated support every step of the way.",
+    details:
+      "Our expert team handles the technical setup, training, and ensures a seamless transition to the new system.",
+  },
 ];
 
 export default function Process() {
@@ -35,9 +41,7 @@ export default function Process() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Our Process
-          </h2>
+          <h2 className="text-6xl md:text-6xl font-bold">Our Process</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             A simple, effective approach to transforming your business
           </p>
@@ -58,7 +62,9 @@ export default function Process() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="space-y-6 p-4">
-                    <p className="text-lg text-muted-foreground">{step.description}</p>
+                    <p className="text-lg text-muted-foreground">
+                      {step.description}
+                    </p>
                     <div className="bg-muted p-6 rounded-lg">
                       <p className="text-sm leading-relaxed">{step.details}</p>
                     </div>

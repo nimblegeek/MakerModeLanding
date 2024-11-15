@@ -8,6 +8,7 @@ const plans = [
     name: "MVP launch",
     price: "$4,999",
     features: [
+      "Boilerplate you own",
       "Landing page",
       "Database setup",
       "Payment integration",
@@ -43,15 +44,13 @@ export default function Pricing() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-4xl font-bold">
-            Simple, Transparent Pricing
-          </h2>
+          <h2 className="text-6xl md:text-6xl font-bold">Pricing</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Choose the plan that's right for your business
+            Choose the plan that fits your needs and budget
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}

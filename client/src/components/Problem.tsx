@@ -20,7 +20,7 @@ export default function Problem() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-6xl md:text-6xl font-bold">
             Stuck in long development cycles?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">

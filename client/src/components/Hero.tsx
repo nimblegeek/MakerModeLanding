@@ -12,12 +12,12 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="space-y-8"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             A developer agency with an edge
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mt-4">
             Helping small businesses and startups to thrive. Go from idea to
-            launch fast and hassle free, without crashing your budget.
+            launch fast, hassle free and without crashing your budget.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
