@@ -16,8 +16,8 @@ export default function Hero() {
             A developer agency with an edge
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Build and ship your project in days, not months. Go from idea to
-            launch fast and hassle free, without overspending your budget
+            Helping small businesses and startups to thrive. Go from idea to
+            launch fast and hassle free, without crashing your budget.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
@@ -50,7 +50,6 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="relative mt-16 w-full max-w-2xl mx-auto"
         >
-          <div className="aspect-video rounded-2xl bg-gradient-to-tr from-primary/20 via-primary/10 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-tr from-background via-background/50 to-background/0" />
         </motion.div>
       </div>

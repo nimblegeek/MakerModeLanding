@@ -24,7 +24,8 @@ export default function Problem() {
             Stuck in long development cycles?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            We help small businesses and startups ship fast without overspending on their budget.
+            We help small businesses and startups ship fast without overspending
+            on their budget.
           </p>
         </motion.div>
 
@@ -37,7 +38,10 @@ export default function Problem() {
           >
             <div className="space-y-6">
               {benefits.map((benefit) => (
-                <div key={benefit} className="flex items-center gap-4 bg-background/50 p-4 rounded-lg">
+                <div
+                  key={benefit}
+                  className="flex items-center gap-4 bg-background/50 p-4 rounded-lg"
+                >
                   <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
                     <Check className="h-5 w-5 text-primary" />
                   </div>
@@ -64,8 +68,8 @@ export default function Problem() {
             <Card className="p-8 bg-primary text-primary-foreground">
               <h3 className="text-xl font-semibold mb-4">After Maker Mode</h3>
               <p className="text-primary-foreground/90 leading-relaxed">
-                Automated workflows, streamlined operations, and maximized revenue
-                potential.
+                Automated workflows, streamlined operations, and maximized
+                revenue potential.
               </p>
             </Card>
           </motion.div>

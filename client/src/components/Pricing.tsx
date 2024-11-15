@@ -5,44 +5,31 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const plans = [
   {
-    name: "Starter",
-    price: "$99",
-    period: "per month",
+    name: "MVP launch",
+    price: "$4,999",
     features: [
-      "Basic features",
-      "Up to 5 users",
-      "Basic reporting",
-      "Email support"
+      "Landing page",
+      "Database setup",
+      "Payment integration",
+      "Deployment and setup",
+      "Average 48 hour delivery",
     ],
-    scheduleLink: "https://cal.com/maker-mode/starter-consultation"
+    scheduleLink: "https://cal.com/makermode/15min",
   },
   {
     name: "Professional",
-    price: "$199",
+    price: "$1,999",
     period: "per month",
     features: [
-      "Advanced features",
-      "Up to 20 users",
-      "Advanced analytics",
-      "Priority support",
-      "Custom integrations"
+      "MVP Launch",
+      "Two feature requests at a time",
+      "Over 500+ UI components to find your look and feel",
+      "Unlimited support",
+      "Average 48 hour delivery",
     ],
     popular: true,
-    scheduleLink: "https://cal.com/maker-mode/professional-consultation"
+    scheduleLink: "https://cal.com/makermode/15min",
   },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    period: "contact us",
-    features: [
-      "All features",
-      "Unlimited users",
-      "Custom solutions",
-      "24/7 support",
-      "Dedicated account manager"
-    ],
-    scheduleLink: "https://cal.com/maker-mode/enterprise-consultation"
-  }
 ];
 
 export default function Pricing() {
@@ -56,7 +43,7 @@ export default function Pricing() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-4xl md:text-4xl font-bold">
             Simple, Transparent Pricing
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -73,7 +60,9 @@ export default function Pricing() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className={`h-full ${plan.popular ? 'border-primary shadow-lg relative' : ''}`}>
+              <Card
+                className={`h-full ${plan.popular ? "border-primary shadow-lg relative" : ""}`}
+              >
                 {plan.popular && (
                   <div className="absolute -top-4 left-0 right-0 flex justify-center">
                     <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-medium">
@@ -103,13 +92,13 @@ export default function Pricing() {
                   </ul>
                   <div className="space-y-3">
                     <Button
-                      className={`w-full ${plan.popular ? 'bg-primary hover:bg-primary/90' : ''}`}
+                      className={`w-full ${plan.popular ? "bg-primary hover:bg-primary/90" : ""}`}
                       variant={plan.popular ? "default" : "outline"}
                       size="lg"
                     >
                       Get Started
                     </Button>
-                    <a 
+                    <a
                       href={plan.scheduleLink}
                       className="flex items-center justify-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
                       target="_blank"
