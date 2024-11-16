@@ -10,12 +10,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="space-y-8"
+          className="space-y-6"
         >
-          <h1 className="text-4xl md:text-6xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             A developer agency with an edge
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mt-8">
+          <p className="text-md md:text-lg text-muted-foreground max-w-xl mx-auto">
             Helping small businesses and startups to thrive. Go from idea to
             launch fast, hassle free and without crashing your budget.
           </p>
