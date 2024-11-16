@@ -5,7 +5,7 @@
 @layer base {
   @font-face {
     font-family: 'Circular';
-    src: url('client/src/fonts/lineto-circular-pro-book.ttf') format('opentype');
+    src: url('./fonts/lineto-circular-pro-book.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
