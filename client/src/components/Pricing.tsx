@@ -104,7 +104,7 @@ export default function Pricing() {
                       rel="noopener noreferrer"
                     >
                       <Calendar className="h-4 w-4" />
-                      Schedule a consultation
+                      Book a call{" "}
                     </a>
                   </div>
                 </CardContent>

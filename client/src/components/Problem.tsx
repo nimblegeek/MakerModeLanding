@@ -59,17 +59,18 @@ export default function Problem() {
             className="grid gap-6"
           >
             <Card className="p-8">
-              <h3 className="text-xl font-semibold mb-4">Before Maker Mode</h3>
+              <h3 className="text-xl font-semibold mb-4">Without Maker Mode</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Manual processes, inefficient workflows, and lost opportunities
-                holding back your growth.
+                Not enough work to keep your developers busy. Budget overspent.
+                Never ending projects. Feeling ripped off from big tech
+                companies. Wasting time in long meetings with the wrong people.
               </p>
             </Card>
             <Card className="p-8 bg-primary text-primary-foreground">
-              <h3 className="text-xl font-semibold mb-4">After Maker Mode</h3>
+              <h3 className="text-xl font-semibold mb-4">With Maker Mode</h3>
               <p className="text-primary-foreground/90 leading-relaxed">
-                Automated workflows, streamlined operations, and maximized
-                revenue potential.
+                Technical partnership. A developer agency providing fast
+                feedback, and amazing support. Projects and features completed fast<br />
               </p>
             </Card>
           </motion.div>

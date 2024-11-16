@@ -15,7 +15,7 @@ export default function Hero() {
           <h1 className="text-4xl md:text-6xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             A developer agency with an edge
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mt-4">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mt-8">
             Helping small businesses and startups to thrive. Go from idea to
             launch fast, hassle free and without crashing your budget.
           </p>
