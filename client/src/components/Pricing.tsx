@@ -6,20 +6,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const plans = [
   {
     name: "MVP launch",
-    price: "$4,999",
+    price: "$1,999",
+    period: "once",
     features: [
-      "Boilerplate you own",
+      "Boilerplate that you own",
       "Landing page",
       "Database setup",
       "Payment integration",
       "Deployment and setup",
-      "Average 48 hour delivery",
+      "Unlimited support",
     ],
     scheduleLink: "https://cal.com/makermode/15min",
   },
   {
     name: "Professional",
-    price: "$1,999",
+    price: "$2,999",
     period: "per month",
     features: [
       "MVP Launch",
