@@ -6,11 +6,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const plans = [
   {
     name: "MVP launch",
-    price: "$1,999",
+    price: "$3,999",
     period: "once",
     features: [
       "Boilerplate that you own",
-      "Landing page",
+      "Website and landing page",
       "Database setup",
       "Payment integration",
       "Deployment and setup",
@@ -20,7 +20,7 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "$2,999",
+    price: "$1,999",
     period: "per month",
     features: [
       "MVP Launch",
