@@ -12,25 +12,19 @@ const steps = [
     title: "Discovery",
     icon: Search,
     description:
-      "We start with a comprehensive assessment of your business needs and goals through a personalized consultation.",
-    details:
-      "During this 30-minute call, we'll discuss your current challenges, objectives, and how our solution can help you achieve your goals.",
+      "We start off with exploring where you are today and what the next best step is. Whether if it is a new MVP, feature or support request we don't start without a clear specification.",
   },
   {
     title: "Implementation",
     icon: Laptop,
     description:
-      "Our team develops a tailored strategy based on your specific requirements and industry best practices.",
-    details:
-      "We analyze your business processes, identify optimization opportunities, and create a detailed implementation plan.",
+      "During the development you get continuous updates with links to your product as your users would see it. We focus on rapid feedback loops and you are involved in every step of the process, if you are geeky enough ;)",
   },
   {
     title: "Launch",
     icon: Rocket,
     description:
-      "We guide you through a smooth implementation process with dedicated support every step of the way.",
-    details:
-      "Our expert team handles the technical setup, training, and ensures a seamless transition to the new system.",
+      "We deploy your product and provide you with the training and documentation needed until you are confident running it on your own.",
   },
 ];
 
@@ -45,9 +39,9 @@ export default function Process() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-6xl md:text-6xl font-bold">A Simple Process</h2>
+          <h2 className="text-6xl md:text-6xl font-bold">How We Work</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            A process grounded in short feedback loops and doing the right thing
+            A process grounded in short feedback loops
           </p>
         </motion.div>
 

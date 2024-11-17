@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, AlertCircle, Rocket } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const benefits = [
-  "Increase revenue by 300%",
-  "Streamline operations",
-  "Reduce costs by 50%",
-  "Improve customer satisfaction",
+  "Ship in days, not weeks",
+  "Get fast feedback from your customers",
+  "Pay for work that matters",
+  "Become profitable without the need for hyperscale",
 ];
 
 export default function Problem() {
@@ -20,7 +20,7 @@ export default function Problem() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-6xl md:text-6xl font-bold">
+          <h2 className="text-6xl md:text-6xl font-bold leading-[1.17]">
             Stuck in long development cycles?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -59,19 +59,44 @@ export default function Problem() {
             className="grid gap-6"
           >
             <Card className="p-8">
-              <h3 className="text-xl font-semibold mb-4">Without Maker Mode</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Not enough work to keep your developers busy. Budget overspent.
-                Never ending projects. Feeling ripped off from big tech
-                companies. Wasting time in long meetings with the wrong people.
-              </p>
+              <h3 className="text-3xl font-semibold mb-4">Without Maker Mode</h3>
+              <div className="space-y-3 text-muted-foreground">
+            
+                <div className="flex items-center gap-2">
+                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                  <p className="leading-relaxed">Budget overspent</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                  <p className="leading-relaxed">Never ending projects</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                  <p className="leading-relaxed">Feeling ripped off from big tech</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                  <p className="leading-relaxed">Stuck in long meetings with wrong people</p>
+                </div>
+              </div>
             </Card>
             <Card className="p-8 bg-primary text-primary-foreground">
-              <h3 className="text-xl font-semibold mb-4">With Maker Mode</h3>
-              <p className="text-primary-foreground/90 leading-relaxed">
-                Technical partnership. A developer agency providing fast
-                feedback, and amazing support. Projects and features completed fast<br />
-              </p>
+              <h3 className="text-3xl font-semibold mb-4">With Maker Mode</h3>
+              
+              <div className="space-y-3 text-primary-foreground/90">
+                <div className="flex items-center gap-2">
+                  <Rocket className="w-5 h-5 flex-shrink-0" />
+                  <p className="leading-relaxed">Technical partnership</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Rocket className="w-5 h-5 flex-shrink-0" />
+                  <p className="leading-relaxed">MVPs and features delivered</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Rocket className="w-5 h-5 flex-shrink-0" />
+                  <p className="leading-relaxed">Developer agency with meaningful support</p>
+                </div>
+              </div>
             </Card>
           </motion.div>
         </div>
