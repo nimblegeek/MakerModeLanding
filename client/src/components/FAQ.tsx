@@ -94,7 +94,7 @@ export default function FAQ() {
 
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to launch that idea?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to launch that idea of yours?</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
             Book a call to discover your needs and see how we can help you ship something amazing.
           </p>
