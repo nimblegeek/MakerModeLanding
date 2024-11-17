@@ -90,11 +90,15 @@ export default function Problem() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Rocket className="w-5 h-5 flex-shrink-0" />
-                  <p className="leading-relaxed">MVPs and features delivered</p>
+                  <p className="leading-relaxed">Rapid feedback</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <Rocket className="w-5 h-5 flex-shrink-0" />
-                  <p className="leading-relaxed">Developer agency with meaningful support</p>
+                  <p className="leading-relaxed">Meaningful support</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Rocket className="w-5 h-5 flex-shrink-0" />
+                  <p className="leading-relaxed">Money & time saved for your business</p>
                 </div>
               </div>
             </Card>

@@ -96,7 +96,7 @@ export default function FAQ() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to launch that idea and get started?</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Book a call to discuss your project needs and see how we can help you build something amazing.
+            Book a call to discover your needs and see how we can help you ship something amazing.
           </p>
           <a
             href="https://cal.com/makermode/15min"
