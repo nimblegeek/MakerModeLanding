@@ -45,7 +45,7 @@ export default function Pricing() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-6xl md:text-6xl font-bold">Pricing</h2>
+          <h2 className="text-5xl md:text-6xl font-bold">Pricing</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             Choose the plan that fits your needs and budget
           </p>

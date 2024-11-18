@@ -39,7 +39,7 @@ export default function Process() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-6xl md:text-6xl font-bold">How We Work</h2>
+          <h2 className="text-5xl md:text-6xl font-bold">How We Work</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             A process grounded in short feedback loops
           </p>
