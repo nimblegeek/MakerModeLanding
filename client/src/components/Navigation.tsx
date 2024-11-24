@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/sheet";
 
 const navItems = [
-  { label: "Home", href: "#" },
   { label: "Solutions", href: "#problem" },
   { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
@@ -29,7 +28,12 @@ export default function Navigation() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <span className="text-xl font-semibold">Maker Mode</span>
+            <a 
+              href="/" 
+              className="text-xl font-semibold hover:opacity-80 transition-opacity"
+            >
+              Maker Mode
+            </a>
           </div>
 
           {/* Desktop Navigation */}

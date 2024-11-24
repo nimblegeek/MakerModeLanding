@@ -16,8 +16,25 @@ export default function Hero() {
             A developer agency with an edge
           </h1>
           <p className="text-lg md:text-lg text-muted-foreground max-w-xl mx-auto">
-            Helping small businesses and startups thrive. Go from idea to launch
-            fast and without crashing your budget.
+            We help small businesses build{" "}
+            <motion.span
+              initial={{ backgroundColor: "transparent" }}
+              animate={{ backgroundColor: "hsl(160 10% 20% / 0.1)" }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="px-1 rounded"
+            >
+              better software
+            </motion.span>{" "}
+            and become more{" "}
+            <motion.span
+              initial={{ backgroundColor: "transparent" }}
+              animate={{ backgroundColor: "hsl(160 10% 20% / 0.1)" }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+              className="px-1 rounded"
+            >
+              profitable
+            </motion.span>
+            . Go from idea to launch fast, without crushing your budget.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button

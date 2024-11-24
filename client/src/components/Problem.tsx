@@ -3,10 +3,11 @@ import { Check, AlertCircle, Rocket } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const benefits = [
-  "Ship in days, not weeks",
+  "Ship in days, not months",
   "Get fast feedback from your customers",
   "Pay for work that matters",
-  "Become profitable without the need for hyperscale",
+  "Become profitable", 
+  "Avoid the trap of hyperscale",
 ];
 
 export default function Problem() {
@@ -64,7 +65,7 @@ export default function Problem() {
             
                 <div className="flex items-center gap-2">
                   <AlertCircle className="w-5 h-5 flex-shrink-0" />
-                  <p className="leading-relaxed">Budget overspent</p>
+                  <p className="leading-relaxed">Crushed budget</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <AlertCircle className="w-5 h-5 flex-shrink-0" />
@@ -76,7 +77,7 @@ export default function Problem() {
                 </div>
                 <div className="flex items-center gap-2">
                   <AlertCircle className="w-5 h-5 flex-shrink-0" />
-                  <p className="leading-relaxed">Stuck in long meetings with wrong people</p>
+                  <p className="leading-relaxed">Stuck in long meetings with the wrong people</p>
                 </div>
               </div>
             </Card>
