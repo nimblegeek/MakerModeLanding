@@ -12,7 +12,7 @@ const navItems = [
   { label: "Solutions", href: "#problem" },
   { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Blog", href: "/blog" },
+  { label: "Blog", href: "client/src/app/blog" },
   { label: "FAQ", href: "#faq" },
 ];
 
