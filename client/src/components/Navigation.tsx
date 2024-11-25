@@ -11,6 +11,7 @@ const navItems = [
   { label: "Solutions", href: "#problem" },
   { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -18,6 +19,10 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
+    if (id.startsWith('/')) {
+      window.location.href = id;
+      return;
+    }
     const element = document.getElementById(id.replace("#", ""));
     element?.scrollIntoView({ behavior: "smooth" });
     setIsOpen(false);

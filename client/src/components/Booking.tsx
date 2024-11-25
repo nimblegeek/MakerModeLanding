@@ -2,6 +2,14 @@ import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'cal-inline-widget': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
+    }
+  }
+}
+
 export default function Booking() {
   return (
     <section id="booking" className="py-20">
