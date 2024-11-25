@@ -1,41 +1,29 @@
-import { notFound } from "next/navigation";
+import { getPostBySlug, getAllPosts } from '@/lib/posts';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 
-// This would typically come from your CMS or database
-const blogPosts = {
-  "building-mvp-fast": {
-    title: "Building MVPs Fast: A Practical Guide",
-    content: "Your full article content here...",
-    date: "2024-03-15",
-    readTime: "5",
-  },
-  // Add more blog posts as needed
-};
+export async function generateStaticParams() {
+  const posts = getAllPosts();
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  console.log('Current slug:', params.slug);
-  console.log('Available slugs:', Object.keys(blogPosts));
-  
-  const post = blogPosts[params.slug as keyof typeof blogPosts];
+export default async function BlogPost({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const post = getPostBySlug(params.slug);
 
   if (!post) {
-    console.log('Post not found, redirecting to 404');
-    notFound();
+    return <div>Post not found</div>;
   }
 
   return (
-    <main className="py-16 md:py-24">
-      <article className="container mx-auto px-4 max-w-3xl">
-        <div className="mb-8">
-          <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-            <time>{post.date}</time>
-            <span>{post.readTime} min read</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-8">{post.title}</h1>
-        </div>
-        <div className="prose prose-lg max-w-none">
-          {post.content}
-        </div>
-      </article>
-    </main>
+    <article className="prose mx-auto max-w-4xl p-4">
+      <h1>{post.title}</h1>
+      <time>{post.date}</time>
+      <MDXRemote source={post.content} />
+    </article>
   );
 } 

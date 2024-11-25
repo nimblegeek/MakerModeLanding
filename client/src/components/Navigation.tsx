@@ -6,6 +6,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import Link from 'next/link';
 
 const navItems = [
   { label: "Solutions", href: "#problem" },
@@ -17,16 +18,6 @@ const navItems = [
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const scrollToSection = (id: string) => {
-    if (id.startsWith('/')) {
-      window.location.href = id;
-      return;
-    }
-    const element = document.getElementById(id.replace("#", ""));
-    element?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(false);
-  };
 
   return (
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b">
@@ -47,7 +38,11 @@ export default function Navigation() {
               <Button
                 key={item.label}
                 variant="ghost"
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => {
+                  const element = document.getElementById(item.href.replace("#", ""));
+                  element?.scrollIntoView({ behavior: "smooth" });
+                  setIsOpen(false);
+                }}
                 className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 {item.label}
@@ -69,7 +64,11 @@ export default function Navigation() {
                     <Button
                       key={item.label}
                       variant="ghost"
-                      onClick={() => scrollToSection(item.href)}
+                      onClick={() => {
+                        const element = document.getElementById(item.href.replace("#", ""));
+                        element?.scrollIntoView({ behavior: "smooth" });
+                        setIsOpen(false);
+                      }}
                       className="w-full justify-center text-lg"
                     >
                       {item.label}
