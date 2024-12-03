@@ -1,18 +1,13 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import Link from 'next/link';
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Link from "next/link";
 
 const navItems = [
   { label: "Solutions", href: "#problem" },
   { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Blog", href: "client/src/app/blog" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -24,8 +19,8 @@ export default function Navigation() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <a 
-              href="/" 
+            <a
+              href="/"
               className="text-xl font-semibold hover:opacity-80 transition-opacity"
             >
               Maker Mode
@@ -39,7 +34,9 @@ export default function Navigation() {
                 key={item.label}
                 variant="ghost"
                 onClick={() => {
-                  const element = document.getElementById(item.href.replace("#", ""));
+                  const element = document.getElementById(
+                    item.href.replace("#", ""),
+                  );
                   element?.scrollIntoView({ behavior: "smooth" });
                   setIsOpen(false);
                 }}
@@ -65,7 +62,9 @@ export default function Navigation() {
                       key={item.label}
                       variant="ghost"
                       onClick={() => {
-                        const element = document.getElementById(item.href.replace("#", ""));
+                        const element = document.getElementById(
+                          item.href.replace("#", ""),
+                        );
                         element?.scrollIntoView({ behavior: "smooth" });
                         setIsOpen(false);
                       }}
