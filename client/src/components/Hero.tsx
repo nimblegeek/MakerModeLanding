@@ -19,7 +19,7 @@ export default function Hero() {
             We help small businesses build{" "}
             <motion.span
               initial={{ backgroundColor: "transparent" }}
-              animate={{ backgroundColor: "hsl(160 10% 20% / 0.1)" }}
+              animate={{ backgroundColor: "rgba(87, 91, 199, 0.2)" }}
               transition={{ delay: 0.5, duration: 0.8 }}
               className="px-1 rounded"
             >
@@ -28,7 +28,7 @@ export default function Hero() {
             and become more{" "}
             <motion.span
               initial={{ backgroundColor: "transparent" }}
-              animate={{ backgroundColor: "hsl(160 10% 20% / 0.1)" }}
+              animate={{ backgroundColor: "rgba(87, 91, 199, 0.2)" }}
               transition={{ delay: 0.8, duration: 0.8 }}
               className="px-1 rounded"
             >
