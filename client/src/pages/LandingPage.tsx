@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import Problem from "../components/Problem";
+import Products from "../components/Products";
 import Process from "../components/Process";
 import Pricing from "../components/Pricing";
 import FAQ from "../components/FAQ";
@@ -15,6 +16,7 @@ export default function LandingPage() {
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
         <Hero />
         <Problem />
+        <Products />
         <Process />
         <Pricing />
         <FAQ />

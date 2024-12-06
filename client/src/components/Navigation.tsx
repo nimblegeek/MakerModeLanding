@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import Link from "next/link";
 
 const navItems = [
   { label: "Solutions", href: "#problem" },
+  { label: "Products", href: "#products" },
   { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },

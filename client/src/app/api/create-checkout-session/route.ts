@@ -1,4 +1,10 @@
-import { NextResponse } from "next/server";
+const navItems = [
+  { label: "Solutions", href: "#problem" },
+  { label: "Process", href: "#process" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "FAQ", href: "#faq" },
+  { label: "New Page", href: "#newpage" }, // Add your new page here
+];import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
