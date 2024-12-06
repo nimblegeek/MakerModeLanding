@@ -5,7 +5,7 @@ import { Code2, Blocks, Rocket } from "lucide-react";
 const products = [
   {
     title: "MVP Development",
-    description: "Get your product to market quickly with a focused, lean approach that prioritizes core features.",
+    description: "Get your product to market fast, ready to be used and validated by your customers",
     icon: Rocket,
     features: ["Custom web application", "Core feature set", "Quick market validation"]
   },

@@ -25,7 +25,7 @@ const plans = [
     features: [
       "MVP Launch",
       "Two feature requests at a time",
-      "Over 500+ UI components to find your look and feel",
+      " 500+ UI components for web design",
       "Unlimited support",
       "Average 48 hour delivery",
     ],
