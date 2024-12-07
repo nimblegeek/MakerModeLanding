@@ -6,7 +6,7 @@ const products = [
   {
     title: "Tech Stacks",
     description:
-      "Get your full-stack ecosystem ready for customization and launch. Create and start all your services through a single-command and host your app with a powerful cloud platform, embraced by developers.",
+      "Get your full-stack ecosystem ready for customization and launch.",
     icon: Blocks,
     features: [
       "Boilerplate code for your frontend & backend",
@@ -15,13 +15,12 @@ const products = [
       "Cloud hosting through DigitalOcean",
     ],
   },
-
   {
     title: "SaaS Boilerplate",
-    description: "",
+    description:
+      "Boilerplate code ready for frontend- and backend customization",
     icon: Code2,
     features: [
-      "Boilerplate code ready for frontend- and backend customization",
       "Database",
       "Authentication",
       "Payment integration",
