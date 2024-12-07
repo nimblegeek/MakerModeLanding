@@ -4,23 +4,42 @@ import { Code2, Blocks, Rocket } from "lucide-react";
 
 const products = [
   {
-    title: "MVP Development",
-    description: "Get your product to market fast, ready to be used and validated by your customers",
-    icon: Rocket,
-    features: ["Custom web application", "Core feature set", "Quick market validation"]
-  },
-  {
-    title: "Custom Solutions",
-    description: "Tailored development solutions that perfectly match your business needs and requirements.",
-    icon: Code2,
-    features: ["Unique functionality", "Scalable architecture", "Business integration"]
-  },
-  {
-    title: "Component Systems",
-    description: "Build a consistent and maintainable UI system with reusable components and design patterns.",
+    title: "Tech Stacks",
+    description:
+      "Get your full-stack ecosystem ready for customization and launch. Create and start all your services through a single-command and host your app with a powerful cloud platform, embraced by developers.",
     icon: Blocks,
-    features: ["Design system", "Component library", "Documentation"]
-  }
+    features: [
+      "Boilerplate code for your frontend & backend",
+      "PostgreSQL database management",
+      "Define and run your app(s) with Docker compose",
+      "Cloud hosting through DigitalOcean",
+    ],
+  },
+
+  {
+    title: "SaaS Boilerplate",
+    description: "",
+    icon: Code2,
+    features: [
+      "Boilerplate code ready for frontend- and backend customization",
+      "Database",
+      "Authentication",
+      "Payment integration",
+      "Tailwind UI components",
+    ],
+  },
+  {
+    title: "Custom MVP development",
+    description:
+      "Get your product to market fast, ready to be used and validated by your customers",
+    icon: Rocket,
+    features: [
+      "Choose your tech stack",
+      "Technical advisory and support",
+      "Incremental development",
+      "Launch and training material",
+    ],
+  },
 ];
 
 export default function Products() {
@@ -34,9 +53,12 @@ export default function Products() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-5xl md:text-6xl font-bold">Our Products</h2>
+          <h2 className="text-5xl md:text-6xl font-bold">
+            Tech Stacks & Boilerplates
+          </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Solutions tailored to your needs, from MVP to full-scale applications
+            Choose your tech-stack or boilerplate and be ready to launch your
+            MVP in days. Or subscribe and launch new features incrementally.
           </p>
         </motion.div>
 
@@ -54,13 +76,20 @@ export default function Products() {
                   <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                     <product.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
-                  <p className="text-muted-foreground mb-4">{product.description}</p>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {product.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    {product.description}
+                  </p>
                 </div>
                 <div className="mt-auto">
                   <ul className="space-y-2">
                     {product.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <li
+                        key={feature}
+                        className="flex items-center gap-2 text-sm text-muted-foreground"
+                      >
                         <div className="h-1.5 w-1.5 rounded-full bg-primary" />
                         {feature}
                       </li>

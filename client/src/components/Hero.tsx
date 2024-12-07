@@ -18,8 +18,8 @@ export default function Hero() {
           <p className="text-lg md:text-lg text-muted-foreground max-w-xl mx-auto">
             We help small businesses build{" "}
             <motion.span
-              initial={{ backgroundColor: "transparent" }}
-              animate={{ backgroundColor: "rgba(87, 91, 199, 0.2)" }}
+              initial={{ backgroundColor: "tranparent" }}
+              animate={{ backgroundColor: "rgba(87, 80, 90, 0.2)" }}
               transition={{ delay: 0.5, duration: 0.8 }}
               className="px-1 rounded"
             >
@@ -28,7 +28,7 @@ export default function Hero() {
             and become more{" "}
             <motion.span
               initial={{ backgroundColor: "transparent" }}
-              animate={{ backgroundColor: "rgba(87, 91, 199, 0.2)" }}
+              animate={{ backgroundColor: "rgba(87, 80, 90, 0.2)" }}
               transition={{ delay: 0.8, duration: 0.8 }}
               className="px-1 rounded"
             >
