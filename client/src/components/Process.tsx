@@ -18,7 +18,7 @@ const steps = [
     title: "Implementation",
     icon: Laptop,
     description:
-      "During the development you get continuous updates with links to your product as your users would see it.",
+      "During the development of your product you get continuous updates and links to your product, as your customers will experience it.",
   },
   {
     title: "Launch",
