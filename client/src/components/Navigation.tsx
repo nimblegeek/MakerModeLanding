@@ -37,8 +37,16 @@ export default function Navigation() {
                   const element = document.getElementById(
                     item.href.replace("#", ""),
                   );
-                  element?.scrollIntoView({ behavior: "smooth" });
-                  setIsOpen(false);
+                  if (element) {
+                    const headerOffset = 80; // Account for fixed header
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: "smooth"
+                    });
+                  }
                 }}
                 className="text-foreground/70 hover:text-foreground transition-colors"
               >
@@ -62,11 +70,23 @@ export default function Navigation() {
                       key={item.label}
                       variant="ghost"
                       onClick={() => {
-                        const element = document.getElementById(
-                          item.href.replace("#", ""),
-                        );
-                        element?.scrollIntoView({ behavior: "smooth" });
                         setIsOpen(false);
+                        // Add delay to ensure sheet closes before scrolling
+                        setTimeout(() => {
+                          const element = document.getElementById(
+                            item.href.replace("#", ""),
+                          );
+                          if (element) {
+                            const headerOffset = 80; // Account for fixed header
+                            const elementPosition = element.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                            
+                            window.scrollTo({
+                              top: offsetPosition,
+                              behavior: "smooth"
+                            });
+                          }
+                        }, 300); // Wait for sheet animation to complete
                       }}
                       className="w-full justify-center text-lg"
                     >
