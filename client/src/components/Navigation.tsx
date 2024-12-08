@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+} from "@/components/ui/sheet";
 
 const navItems = [
   { label: "Solutions", href: "#problem" },
@@ -13,6 +18,21 @@ const navItems = [
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const scrollToSection = useCallback((elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      // Calculate header offset based on device type
+      const headerOffset = window.innerWidth <= 768 ? 70 : 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: Math.max(0, offsetPosition), // Ensure we don't scroll past the top
+        behavior: "smooth",
+      });
+    }
+  }, []);
 
   return (
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b">
@@ -33,22 +53,9 @@ export default function Navigation() {
               <Button
                 key={item.label}
                 variant="ghost"
-                onClick={() => {
-                  const element = document.getElementById(
-                    item.href.replace("#", ""),
-                  );
-                  if (element) {
-                    const headerOffset = 80; // Account for fixed header
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    
-                    window.scrollTo({
-                      top: offsetPosition,
-                      behavior: "smooth"
-                    });
-                  }
-                }}
+                onClick={() => scrollToSection(item.href.replace("#", ""))}
                 className="text-foreground/70 hover:text-foreground transition-colors"
+                aria-label={`Navigate to ${item.label} section`}
               >
                 {item.label}
               </Button>
@@ -59,36 +66,39 @@ export default function Navigation() {
           <div className="md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button 
+                  variant="ghost" 
+                  size="icon"
+                  aria-label="Open navigation menu"
+                >
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent>
-                <div className="flex flex-col space-y-6 mt-8">
+              <SheetContent
+                side="right"
+                className="w-full sm:w-80"
+              >
+                <SheetTitle className="text-lg font-semibold mb-4">
+                  Navigation Menu
+                </SheetTitle>
+                <div 
+                  className="flex flex-col space-y-4"
+                  role="navigation"
+                  aria-label="Mobile navigation"
+                >
                   {navItems.map((item) => (
                     <Button
                       key={item.label}
                       variant="ghost"
                       onClick={() => {
                         setIsOpen(false);
-                        // Add delay to ensure sheet closes before scrolling
+                        // Increased delay and smoother transition
                         setTimeout(() => {
-                          const element = document.getElementById(
-                            item.href.replace("#", ""),
-                          );
-                          if (element) {
-                            const headerOffset = 80; // Account for fixed header
-                            const elementPosition = element.getBoundingClientRect().top;
-                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                            
-                            window.scrollTo({
-                              top: offsetPosition,
-                              behavior: "smooth"
-                            });
-                          }
-                        }, 300); // Wait for sheet animation to complete
+                          scrollToSection(item.href.replace("#", ""));
+                        }, 400);
                       }}
-                      className="w-full justify-center text-lg"
+                      className="w-full justify-center text-lg transition-all duration-200 hover:bg-accent"
+                      aria-label={`Navigate to ${item.label} section`}
                     >
                       {item.label}
                     </Button>
