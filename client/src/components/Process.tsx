@@ -12,19 +12,19 @@ const steps = [
     title: "Discovery",
     icon: Search,
     description:
-      "We start off with exploring where you are today and what the next best step is. Whether if it is a new MVP, feature or support request we don't start without a clear specification.",
+      "We explore and discuss your idea and create a clear plan forward.",
   },
   {
     title: "Implementation",
     icon: Laptop,
     description:
-      "During the development you get continuous updates with links to your product as your users would see it. We focus on rapid feedback loops and you are involved in every step of the process, if you are geeky enough ;)",
+      "During the development you get continuous updates with links to your product as your users would see it.",
   },
   {
     title: "Launch",
     icon: Rocket,
     description:
-      "We deploy your product and provide you with the training and documentation needed until you are confident running it on your own.",
+      "We deploy your product and provide you with the training needed until you are confident running it on your own.",
   },
 ];
 

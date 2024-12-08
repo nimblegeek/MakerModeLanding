@@ -6,11 +6,10 @@ const products = [
   {
     title: "Tech Stacks",
     description:
-      "Get your full-stack ecosystem ready for customization and launch.",
+      "Get your full-stack ecosystem including tools to run and deploy.",
     icon: Blocks,
     features: [
-      "Boilerplate code for your frontend & backend",
-      "PostgreSQL database management",
+      "Boilerplate code & database",
       "Define and run your app(s) with Docker compose",
       "Cloud hosting through DigitalOcean",
     ],
@@ -18,7 +17,7 @@ const products = [
   {
     title: "SaaS Boilerplate",
     description:
-      "Boilerplate code ready for frontend- and backend customization",
+      "Full-stack app ready for SaaS launch. Tweak and customize  to your needs and taste.",
     icon: Code2,
     features: [
       "Database",
@@ -28,9 +27,9 @@ const products = [
     ],
   },
   {
-    title: "Custom MVP development",
+    title: "Custom MVP",
     description:
-      "Get your product to market fast, ready to be used and validated by your customers",
+      "Get your unique idea to market fast, with a carefully crafted solution.",
     icon: Rocket,
     features: [
       "Choose your tech stack",
