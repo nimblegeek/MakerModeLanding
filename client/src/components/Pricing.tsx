@@ -2,12 +2,14 @@ import { motion } from "framer-motion";
 import { Check, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useState } from "react";
 
 const plans = [
   {
-    name: "MVP launch",
+    name: "Starter",
     price: "$3,999",
     period: "once",
+    stripePriceId: "prod_RHH61HhFSo3VFH",
     features: [
       "Boilerplate that you own",
       "Website and landing page",
@@ -23,9 +25,10 @@ const plans = [
     price: "$1,999",
     period: "per month",
     features: [
-      "MVP Launch",
+      "Full-stack web development with React & Tailwind UI",
+      "Deployment tooling",
+      "Hosting resources",
       "Two feature requests at a time",
-      " 500+ UI components for web design",
       "Unlimited support",
       "Average 48 hour delivery",
     ],
@@ -35,6 +38,32 @@ const plans = [
 ];
 
 export default function Pricing() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleCheckout = async (priceId: string) => {
+    setIsLoading(true);
+    try {
+      const response = await fetch("/api/create-checkout-session", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ priceId }),
+      });
+
+      const { sessionId } = await response.json();
+      // Redirect to Stripe Checkout
+      const stripe = await loadStripe(
+        process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!,
+      );
+      await stripe?.redirectToCheckout({ sessionId });
+    } catch (error) {
+      console.error("Error:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section id="pricing" className="py-20">
       <div className="max-w-5xl mx-auto">

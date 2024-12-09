@@ -23,21 +23,22 @@ export default function FAQ() {
               </AccordionTrigger>
               <AccordionContent>
                 To start with, the average yearly cost of a full-time senior
-                full-stack developer now exceeds €140,000 plus benefits (and good
-                luck finding one available). Aside from that, you may not always
-                have enough work to keep them busy at all times, so you're stuck
-                paying for time you aren't able to utilize. With the monthly plan,
-                you can pause and resume your subscription as often as you need to
-                ensure you're only paying your developer when you have work
-                available for them.
+                full-stack developer now exceeds €140,000 plus benefits (and
+                good luck finding one available). Aside from that, you may not
+                always have enough work to keep them busy at all times, so
+                you're stuck paying for time you aren't able to utilize. With
+                the monthly plan, you can pause and resume your subscription as
+                often as you need to ensure you're only paying your developer
+                when you have work available for them.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-2">
               <AccordionTrigger>Can I cancel or get a refund?</AccordionTrigger>
               <AccordionContent>
-                Yes. You will never pay for something you are not happy with. Once
-                enrolled you can cancel or pause anytime. According to your needs.
+                Yes. You will never pay for something you are not happy with.
+                Once enrolled you can cancel or pause anytime. According to your
+                needs.
               </AccordionContent>
             </AccordionItem>
 
@@ -45,10 +46,10 @@ export default function FAQ() {
               <AccordionTrigger>Who are the developers?</AccordionTrigger>
               <AccordionContent>
                 MakerMode is an agency of one. This means you work directly with
-                me. This might mean that I will have a lot to do from time to time
-                leading to longer response times. But no requests will take more
-                than 48 hours to get feedback on. But it also mean no long email
-                threads with consultant brokers, no boring meetings with
+                me. This might mean that I will have a lot to do from time to
+                time leading to longer response times. But no requests will take
+                more than 48 hours to get feedback on. But it also mean no long
+                email threads with consultant brokers, no boring meetings with
                 procurement departments or long administrative processes and
                 manager meetings. Just direct dialogue with me, Jonas.
               </AccordionContent>
@@ -59,11 +60,11 @@ export default function FAQ() {
                 What tools and stacks do you use?
               </AccordionTrigger>
               <AccordionContent>
-                I use Replit for building and deploying apps. But in general I use
-                a lot of tools depending on the complexity. I try to keep it
-                simple. I have a go-to stack for most projects, but I am also
-                happy to use whatever tools and frameworks needed for each
-                project. Most web apps are built using React.
+                I use a variety of tools depending on the complexity and I try
+                to keep it simple. I have a go-to stack for most projects, but I
+                am also happy to use whatever tools and frameworks needed for
+                each project. Most web apps are built using React and Tailwind
+                UI.
               </AccordionContent>
             </AccordionItem>
 
@@ -72,9 +73,9 @@ export default function FAQ() {
                 Is there any projects you don't do?
               </AccordionTrigger>
               <AccordionContent>
-                I don't do AI apps, 3D modelling, game- or animation projects for
-                example. Also, I claim the right to say no to any requests that
-                may violate my foundational values.
+                I don't do AI apps, 3D modelling, game- or animation projects
+                for example. Also, I claim the right to say no to any requests
+                that may violate my foundational values.
               </AccordionContent>
             </AccordionItem>
 
@@ -94,9 +95,12 @@ export default function FAQ() {
 
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to launch that project?</h2>
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to launch that project?
+          </h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Book a call to discover your needs and see how we can help you ship something amazing.
+            Book a call to discover your needs and see how we can help you ship
+            something amazing.
           </p>
           <a
             href="https://cal.com/makermode/15min"
