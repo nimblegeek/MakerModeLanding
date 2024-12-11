@@ -110,7 +110,7 @@ export default function Products() {
                     </div>
                   </Card>
                 </DialogTrigger>
-                <DialogContent>
+                <DialogContent className="text-left">
                   <DialogHeader>
                     <DialogTitle className="text-2xl flex items-center gap-2">
                       <product.icon className="h-6 w-6" />
