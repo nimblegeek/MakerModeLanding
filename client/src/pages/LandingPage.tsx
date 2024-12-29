@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Problem from "../components/Problem";
 import Products from "../components/Products";
 import Process from "../components/Process";
+import Articles from "../components/Articles";
 import Pricing from "../components/Pricing";
 import FAQ from "../components/FAQ";
 import { Button } from "@/components/ui/button";
@@ -18,6 +19,7 @@ export default function LandingPage() {
         <Problem />
         <Products />
         <Process />
+        <Articles />
         <Pricing />
         <FAQ />
       </main>
