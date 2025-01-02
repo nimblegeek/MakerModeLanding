@@ -14,9 +14,14 @@ export default defineConfig({
     port: 3000,
     strictPort: true,
   },
+  root: path.resolve(__dirname, "client"),
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./client/src"),
+      "@": path.resolve(__dirname, "client/src"),
     },
+  },
+  build: {
+    outDir: path.resolve(__dirname, "dist/public"),
+    emptyOutDir: true,
   },
 });
