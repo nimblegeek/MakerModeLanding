@@ -1,8 +1,19 @@
-
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { getAllPosts } from '@/lib/posts';
 import { useNavigate } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom'; // Added import for BrowserRouter
+
+function App() { // Assuming this is the main app component
+  return (
+    <BrowserRouter> {/* Wrapped the app with BrowserRouter */}
+      <div>
+        {/* Rest of your app components */}
+        <Articles/>
+      </div>
+    </BrowserRouter>
+  )
+}
 
 export default function Articles() {
   const navigate = useNavigate();
