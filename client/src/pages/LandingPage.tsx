@@ -26,7 +26,7 @@ export default function LandingPage() {
 
       <footer className="bg-muted mt-24 py-12">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-muted-foreground">
-          <p>© 2024 Maker Mode. All rights reserved.</p>
+          <p>© 2025 Maker Mode. All rights reserved.</p>
         </div>
       </footer>
     </div>
