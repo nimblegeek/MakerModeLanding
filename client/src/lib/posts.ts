@@ -1,10 +1,11 @@
 
 import matter from 'gray-matter';
 
+// Define the list of available posts
 const POSTS = {
-  'first-post': await import('../content/posts/first-post.mdx?raw'),
-  'hello-world': await import('../content/posts/hello-world.mdx?raw'),
-  'test': await import('../content/posts/test.mdx?raw')
+  'first-post': () => import('../content/posts/first-post.mdx'),
+  'hello-world': () => import('../content/posts/hello-world.mdx'),
+  'test': () => import('../content/posts/test.mdx')
 };
 
 export interface BlogPost {
@@ -15,27 +16,31 @@ export interface BlogPost {
   content: string;
 }
 
-export function getAllPosts(): BlogPost[] {
-  const posts = Object.entries(POSTS).map(([slug, module]) => {
-    const { data, content } = matter(module.default);
-    
-    return {
-      slug,
-      content,
-      title: data.title,
-      date: data.date,
-      description: data.description,
-    };
-  });
+export async function getAllPosts(): Promise<BlogPost[]> {
+  const posts = await Promise.all(
+    Object.entries(POSTS).map(async ([slug, importFn]) => {
+      const module = await importFn();
+      const { attributes: data, body: content } = module.default;
+      
+      return {
+        slug,
+        content,
+        title: data.title,
+        date: data.date,
+        description: data.description,
+      };
+    })
+  );
 
   return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export function getPostBySlug(slug: string): BlogPost | undefined {
-  const post = POSTS[slug];
-  if (!post) return undefined;
+export async function getPostBySlug(slug: string): Promise<BlogPost | undefined> {
+  const importFn = POSTS[slug];
+  if (!importFn) return undefined;
 
-  const { data, content } = matter(post.default);
+  const module = await importFn();
+  const { attributes: data, body: content } = module.default;
   
   return {
     slug,

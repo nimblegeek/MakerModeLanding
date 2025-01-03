@@ -6,7 +6,11 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Articles() {
   const navigate = useNavigate();
-  const articles = getAllPosts().slice(0, 3);
+  const [articles, setArticles] = React.useState<BlogPost[]>([]);
+
+  React.useEffect(() => {
+    getAllPosts().then(posts => setArticles(posts.slice(0, 3)));
+  }, []);
 
   return (
     <section className="py-16 md:py-24" id="articles">
