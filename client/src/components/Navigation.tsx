@@ -18,7 +18,7 @@ const navItems = [
   { label: "FAQ", href: "#faq" },
 ];
 
-export default function Navigation() {
+export default function Navigation({ isArticlesPage }: { isArticlesPage?: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = useCallback((elementId: string) => {
@@ -59,7 +59,11 @@ export default function Navigation() {
                 onClick={(e) => {
                   if (item.href.startsWith("#")) {
                     e.preventDefault();
-                    scrollToSection(item.href.replace("#", ""));
+                    if (isArticlesPage) {
+                      window.location.href = "/" + item.href;
+                    } else {
+                      scrollToSection(item.href.replace("#", ""));
+                    }
                   }
                 }}
                 className="text-foreground/70 hover:text-foreground transition-colors"
