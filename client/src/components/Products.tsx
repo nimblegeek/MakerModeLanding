@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Code2, Blocks, Rocket } from "lucide-react";
@@ -110,7 +109,8 @@ export default function Products() {
                     </div>
                   </Card>
                 </DialogTrigger>
-                <DialogContent>
+                <DialogContent aria-describedby="dialog-description">
+                  <div id="dialog-description" className="sr-only">Product details and features</div>
                   <DialogHeader className="text-left">
                     <DialogTitle className="text-2xl flex items-center gap-2">
                       <product.icon className="h-6 w-6" />
