@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import Navigation from "../components/Navigation";
 import { Card } from "@/components/ui/card";
@@ -32,10 +31,17 @@ export default function ArticlesPage() {
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {articles.map((article) => (
-              <Card key={article.slug} className="p-6 hover:bg-muted/50 transition-colors">
+              <Card
+                key={article.slug}
+                className="p-6 hover:bg-muted/50 transition-colors"
+              >
                 <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
-                <p className="text-muted-foreground mb-4">{article.description}</p>
-                <time className="text-sm text-muted-foreground">{article.date}</time>
+                <p className="text-muted-foreground mb-4">
+                  {article.description}
+                </p>
+                <time className="text-sm text-muted-foreground">
+                  {article.date}
+                </time>
               </Card>
             ))}
           </div>
