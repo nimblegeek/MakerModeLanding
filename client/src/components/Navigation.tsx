@@ -7,7 +7,7 @@ import {
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { Link } from "react-router-dom";
+import { Link } from "wouter";
 
 const navItems = [
   { label: "Solutions", href: "#problem" },
@@ -52,25 +52,18 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              {item.href.startsWith("#") ? (
-                <button
-                  key={item.label}
-                  onClick={() => scrollToSection(item.href.replace("#", ""))}
+              <Link key={item.label} href={item.href}>
+                <a
+                  onClick={() =>
+                    item.href.startsWith("#") &&
+                    scrollToSection(item.href.replace("#", ""))
+                  }
                   className="text-foreground/70 hover:text-foreground transition-colors"
                   aria-label={`Navigate to ${item.label} section`}
                 >
                   {item.label}
-                </button>
-              ) : (
-                <Link
-                  key={item.label}
-                  to={item.href}
-                  className="text-foreground/70 hover:text-foreground transition-colors"
-                  aria-label={`Navigate to ${item.label} section`}
-                >
-                  {item.label}
-                </Link>
-              )}
+                </a>
+              </Link>
             ))}
           </div>
 
