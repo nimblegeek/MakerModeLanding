@@ -1,12 +1,8 @@
-
+import fs from 'fs';
+import path from 'path';
 import matter from 'gray-matter';
 
-// Define the list of available posts
-const POSTS = {
-  'first-post': () => import('../content/posts/first-post.mdx'),
-  'hello-world': () => import('../content/posts/hello-world.mdx'),
-  'test': () => import('../content/posts/test.mdx')
-};
+const postsDirectory = path.join(process.cwd(), 'src/content/posts');
 
 export interface BlogPost {
   slug: string;
@@ -16,37 +12,48 @@ export interface BlogPost {
   content: string;
 }
 
-export async function getAllPosts(): Promise<BlogPost[]> {
-  const posts = await Promise.all(
-    Object.entries(POSTS).map(async ([slug, importFn]) => {
-      const module = await importFn();
-      const { attributes: data, body: content } = module.default;
-      
-      return {
-        slug,
-        content,
-        title: data.title,
-        date: data.date,
-        description: data.description,
-      };
-    })
-  );
+export function getAllPosts(): BlogPost[] {
+  // Get file names under /posts
+  const fileNames = fs.readdirSync(postsDirectory);
+  
+  const posts = fileNames.map((fileName) => {
+    // Remove ".mdx" from file name to get slug
+    const slug = fileName.replace(/\.mdx$/, '');
 
+    // Read markdown file as string
+    const fullPath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+    // Use gray-matter to parse the post metadata section
+    const { data, content } = matter(fileContents);
+
+    return {
+      slug,
+      content,
+      title: data.title,
+      date: data.date,
+      description: data.description,
+    };
+  });
+
+  // Sort posts by date
   return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export async function getPostBySlug(slug: string): Promise<BlogPost | undefined> {
-  const importFn = POSTS[slug];
-  if (!importFn) return undefined;
+export function getPostBySlug(slug: string): BlogPost | undefined {
+  try {
+    const fullPath = path.join(postsDirectory, `${slug}.mdx`);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const { data, content } = matter(fileContents);
 
-  const module = await importFn();
-  const { attributes: data, body: content } = module.default;
-  
-  return {
-    slug,
-    content,
-    title: data.title,
-    date: data.date,
-    description: data.description,
-  };
-}
+    return {
+      slug,
+      content,
+      title: data.title,
+      date: data.date,
+      description: data.description,
+    };
+  } catch {
+    return undefined;
+  }
+} 

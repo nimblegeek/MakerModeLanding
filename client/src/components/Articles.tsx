@@ -1,16 +1,23 @@
-
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { getAllPosts } from '@/lib/posts';
 import { useNavigate } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom'; // Added import for BrowserRouter
+
+function App() { // Assuming this is the main app component
+  return (
+    <BrowserRouter> {/* Wrapped the app with BrowserRouter */}
+      <div>
+        {/* Rest of your app components */}
+        <Articles/>
+      </div>
+    </BrowserRouter>
+  )
+}
 
 export default function Articles() {
   const navigate = useNavigate();
-  const [articles, setArticles] = React.useState<BlogPost[]>([]);
-
-  React.useEffect(() => {
-    getAllPosts().then(posts => setArticles(posts.slice(0, 3)));
-  }, []);
+  const articles = getAllPosts().slice(0, 3);
 
   return (
     <section className="py-16 md:py-24" id="articles">
