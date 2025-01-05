@@ -56,38 +56,32 @@ export default function Navigation({
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {isArticlesPage ? (
               <Link
-                key={item.label}
-                to={item.href.startsWith("#") && isArticlesPage ? "/" + item.href : item.href}
-                onClick={(e) => {
-                  if (item.href.startsWith("#")) {
-                    e.preventDefault();
-                    if (isArticlesPage) {
-                      window.location.href = "/" + item.href;
-                      setTimeout(() => {
-                        const section = document.getElementById(item.href.replace("#", ""));
-                        if (section) {
-                          const headerOffset = window.innerWidth <= 768 ? 70 : 80;
-                          const elementPosition = section.getBoundingClientRect().top;
-                          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                          window.scrollTo({
-                            top: Math.max(0, offsetPosition),
-                            behavior: "smooth"
-                          });
-                        }
-                      }, 100);
-                    } else {
+                to="/"
+                className="text-foreground/70 hover:text-foreground transition-colors"
+                aria-label="Navigate to home"
+              >
+                Home
+              </Link>
+            ) : (
+              navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  onClick={(e) => {
+                    if (item.href.startsWith("#")) {
+                      e.preventDefault();
                       scrollToSection(item.href.replace("#", ""));
                     }
-                  }
-                }}
-                className="text-foreground/70 hover:text-foreground transition-colors"
-                aria-label={`Navigate to ${item.label} section`}
-              >
-                {item.label}
-              </Link>
-            ))}
+                  }}
+                  className="text-foreground/70 hover:text-foreground transition-colors"
+                  aria-label={`Navigate to ${item.label} section`}
+                >
+                  {item.label}
+                </Link>
+              ))
+            )}
           </div>
 
           {/* Mobile Navigation */}
@@ -109,36 +103,43 @@ export default function Navigation({
                   role="navigation"
                   aria-label="Mobile navigation"
                 >
-                  {navItems.map((item) =>
-                    item.href.startsWith("#") ? (
-                      <button
-                        key={item.label}
-                        onClick={() => {
-                          setIsOpen(false);
-                          if (isArticlesPage) {
-                            window.location.href = "/" + item.href;
-                          } else {
+                  {isArticlesPage ? (
+                    <Link
+                      to="/"
+                      onClick={() => setIsOpen(false)}
+                      className="w-full text-center px-4 py-2 text-lg transition-all duration-200 hover:bg-accent"
+                      aria-label="Navigate to home"
+                    >
+                      Home
+                    </Link>
+                  ) : (
+                    navItems.map((item) =>
+                      item.href.startsWith("#") ? (
+                        <button
+                          key={item.label}
+                          onClick={() => {
+                            setIsOpen(false);
                             setTimeout(() => {
                               scrollToSection(item.href.replace("#", ""));
                             }, 400);
-                          }
-                        }}
-                        className="w-full text-center px-4 py-2 text-lg transition-all duration-200 hover:bg-accent"
-                        aria-label={`Navigate to ${item.label} section`}
-                      >
-                        {item.label}
-                      </button>
-                    ) : (
-                      <Link
-                        key={item.label}
-                        to={item.href}
-                        onClick={() => setIsOpen(false)}
-                        className="w-full text-center px-4 py-2 text-lg transition-all duration-200 hover:bg-accent"
-                        aria-label={`Navigate to ${item.label} section`}
-                      >
-                        {item.label}
-                      </Link>
-                    ),
+                          }}
+                          className="w-full text-center px-4 py-2 text-lg transition-all duration-200 hover:bg-accent"
+                          aria-label={`Navigate to ${item.label} section`}
+                        >
+                          {item.label}
+                        </button>
+                      ) : (
+                        <Link
+                          key={item.label}
+                          to={item.href}
+                          onClick={() => setIsOpen(false)}
+                          className="w-full text-center px-4 py-2 text-lg transition-all duration-200 hover:bg-accent"
+                          aria-label={`Navigate to ${item.label} section`}
+                        >
+                          {item.label}
+                        </Link>
+                      )
+                    )
                   )}
                 </div>
               </SheetContent>
