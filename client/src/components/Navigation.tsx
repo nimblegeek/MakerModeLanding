@@ -59,7 +59,7 @@ export default function Navigation({
             {navItems.map((item) => (
               <Link
                 key={item.label}
-                to={item.href}
+                to={item.href.startsWith("#") && isArticlesPage ? "/" + item.href : item.href}
                 onClick={(e) => {
                   if (item.href.startsWith("#")) {
                     e.preventDefault();
