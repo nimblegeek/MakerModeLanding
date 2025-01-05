@@ -1,59 +1,34 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
 
-const postsDirectory = path.join(process.cwd(), 'src/content/posts');
+import type { BlogPost } from '../types/blog';
 
-export interface BlogPost {
-  slug: string;
-  title: string;
-  date: string;
-  description: string;
-  content: string;
-}
+const mockPosts: BlogPost[] = [
+  {
+    slug: 'getting-started',
+    title: 'Getting Started with Development',
+    date: '2024-01-15',
+    description: 'Learn the fundamentals of modern web development.',
+    content: 'This is a comprehensive guide to getting started with web development...'
+  },
+  {
+    slug: 'best-practices',
+    title: 'Web Development Best Practices',
+    date: '2024-01-20',
+    description: 'Essential practices for writing clean, maintainable code.',
+    content: 'In this article, we explore the best practices for modern web development...'
+  },
+  {
+    slug: 'advanced-techniques',
+    title: 'Advanced Development Techniques',
+    date: '2024-01-25',
+    description: 'Take your development skills to the next level.',
+    content: 'Discover advanced techniques used by professional developers...'
+  }
+];
 
 export function getAllPosts(): BlogPost[] {
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  
-  const posts = fileNames.map((fileName) => {
-    // Remove ".mdx" from file name to get slug
-    const slug = fileName.replace(/\.mdx$/, '');
-
-    // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-    // Use gray-matter to parse the post metadata section
-    const { data, content } = matter(fileContents);
-
-    return {
-      slug,
-      content,
-      title: data.title,
-      date: data.date,
-      description: data.description,
-    };
-  });
-
-  // Sort posts by date
-  return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+  return mockPosts.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  try {
-    const fullPath = path.join(postsDirectory, `${slug}.mdx`);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data, content } = matter(fileContents);
-
-    return {
-      slug,
-      content,
-      title: data.title,
-      date: data.date,
-      description: data.description,
-    };
-  } catch {
-    return undefined;
-  }
-} 
+  return mockPosts.find(post => post.slug === slug);
+}
