@@ -13,12 +13,16 @@ const navItems = [
   { label: "Solutions", href: "#problem" },
   { label: "Products", href: "#products" },
   { label: "Process", href: "#process" },
-  { label: "Articles", href: "/articles" },
   { label: "Pricing", href: "#pricing" },
+  { label: "Articles", href: "/articles" },
   { label: "FAQ", href: "#faq" },
 ];
 
-export default function Navigation({ isArticlesPage }: { isArticlesPage?: boolean }) {
+export default function Navigation({
+  isArticlesPage,
+}: {
+  isArticlesPage?: boolean;
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = useCallback((elementId: string) => {
