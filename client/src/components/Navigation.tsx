@@ -27,7 +27,8 @@ export default function Navigation() {
       // Calculate header offset based on device type
       const headerOffset = window.innerWidth <= 768 ? 70 : 80;
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
 
       window.scrollTo({
         top: Math.max(0, offsetPosition), // Ensure we don't scroll past the top
@@ -79,19 +80,14 @@ export default function Navigation() {
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent
-                side="right"
-                className="w-full sm:w-80"
-              >
-                <SheetTitle className="text-lg font-semibold mb-4">
-                  Navigation Menu
-                </SheetTitle>
+              <SheetContent side="right" className="w-full sm:w-80">
+                <SheetTitle className="text-lg font-semibold mb-4"></SheetTitle>
                 <div
                   className="flex flex-col space-y-4"
                   role="navigation"
                   aria-label="Mobile navigation"
                 >
-                  {navItems.map((item) => (
+                  {navItems.map((item) =>
                     item.href.startsWith("#") ? (
                       <button
                         key={item.label}
@@ -116,8 +112,8 @@ export default function Navigation() {
                       >
                         {item.label}
                       </Link>
-                    )
-                  ))}
+                    ),
+                  )}
                 </div>
               </SheetContent>
             </Sheet>
