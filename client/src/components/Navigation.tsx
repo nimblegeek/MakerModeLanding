@@ -103,11 +103,15 @@ export default function Navigation({
                         key={item.label}
                         onClick={() => {
                           setIsOpen(false);
-                          setTimeout(() => {
-                            scrollToSection(item.href.replace("#", ""));
-                          }, 400);
+                          if (isArticlesPage) {
+                            window.location.href = "/" + item.href;
+                          } else {
+                            setTimeout(() => {
+                              scrollToSection(item.href.replace("#", ""));
+                            }, 400);
+                          }
                         }}
-                        className="w-full text-left px-4 py-2 text-lg transition-all duration-200 hover:bg-accent"
+                        className="w-full text-center px-4 py-2 text-lg transition-all duration-200 hover:bg-accent"
                         aria-label={`Navigate to ${item.label} section`}
                       >
                         {item.label}
@@ -117,7 +121,7 @@ export default function Navigation({
                         key={item.label}
                         to={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="w-full text-left px-4 py-2 text-lg transition-all duration-200 hover:bg-accent"
+                        className="w-full text-center px-4 py-2 text-lg transition-all duration-200 hover:bg-accent"
                         aria-label={`Navigate to ${item.label} section`}
                       >
                         {item.label}
