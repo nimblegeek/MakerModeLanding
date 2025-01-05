@@ -65,6 +65,18 @@ export default function Navigation({
                     e.preventDefault();
                     if (isArticlesPage) {
                       window.location.href = "/" + item.href;
+                      setTimeout(() => {
+                        const section = document.getElementById(item.href.replace("#", ""));
+                        if (section) {
+                          const headerOffset = window.innerWidth <= 768 ? 70 : 80;
+                          const elementPosition = section.getBoundingClientRect().top;
+                          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                          window.scrollTo({
+                            top: Math.max(0, offsetPosition),
+                            behavior: "smooth"
+                          });
+                        }
+                      }, 100);
                     } else {
                       scrollToSection(item.href.replace("#", ""));
                     }
