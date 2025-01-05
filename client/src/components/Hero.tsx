@@ -13,7 +13,7 @@ export default function Hero() {
           className="space-y-6"
         >
           <h1 className="text-6xl font-bold leading-[1.2] bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-            A developer agency with an edge
+            A (human) developer agency with an edge
           </h1>
           <p className="text-lg md:text-lg text-muted-foreground max-w-xl mx-auto">
             We help small businesses build{" "}
