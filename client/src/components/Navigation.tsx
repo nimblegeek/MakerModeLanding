@@ -7,6 +7,7 @@ import {
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet";
+import { Link } from "wouter";
 
 const navItems = [
   { label: "Solutions", href: "#problem" },
@@ -51,15 +52,18 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Button
-                key={item.label}
-                variant="ghost"
-                onClick={() => scrollToSection(item.href.replace("#", ""))}
-                className="text-foreground/70 hover:text-foreground transition-colors"
-                aria-label={`Navigate to ${item.label} section`}
-              >
-                {item.label}
-              </Button>
+              <Link key={item.label} href={item.href}>
+                <a
+                  onClick={() =>
+                    item.href.startsWith("#") &&
+                    scrollToSection(item.href.replace("#", ""))
+                  }
+                  className="text-foreground/70 hover:text-foreground transition-colors"
+                  aria-label={`Navigate to ${item.label} section`}
+                >
+                  {item.label}
+                </a>
+              </Link>
             ))}
           </div>
 
@@ -67,8 +71,8 @@ export default function Navigation() {
           <div className="md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   size="icon"
                   aria-label="Open navigation menu"
                 >
@@ -82,27 +86,28 @@ export default function Navigation() {
                 <SheetTitle className="text-lg font-semibold mb-4">
                   Navigation Menu
                 </SheetTitle>
-                <div 
+                <div
                   className="flex flex-col space-y-4"
                   role="navigation"
                   aria-label="Mobile navigation"
                 >
                   {navItems.map((item) => (
-                    <Button
-                      key={item.label}
-                      variant="ghost"
-                      onClick={() => {
-                        setIsOpen(false);
-                        // Increased delay and smoother transition
-                        setTimeout(() => {
-                          scrollToSection(item.href.replace("#", ""));
-                        }, 400);
-                      }}
-                      className="w-full justify-center text-lg transition-all duration-200 hover:bg-accent"
-                      aria-label={`Navigate to ${item.label} section`}
-                    >
-                      {item.label}
-                    </Button>
+                    <Link key={item.label} href={item.href}>
+                      <a
+                        onClick={() => {
+                          setIsOpen(false);
+                          // Increased delay and smoother transition
+                          setTimeout(() => {
+                            item.href.startsWith("#") &&
+                              scrollToSection(item.href.replace("#", ""));
+                          }, 400);
+                        }}
+                        className="w-full justify-center text-lg transition-all duration-200 hover:bg-accent"
+                        aria-label={`Navigate to ${item.label} section`}
+                      >
+                        {item.label}
+                      </a>
+                    </Link>
                   ))}
                 </div>
               </SheetContent>
