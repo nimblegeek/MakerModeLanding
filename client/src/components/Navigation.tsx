@@ -92,22 +92,30 @@ export default function Navigation() {
                   aria-label="Mobile navigation"
                 >
                   {navItems.map((item) => (
-                    <Link key={item.label} href={item.href}>
-                      <a
+                    item.href.startsWith("#") ? (
+                      <button
+                        key={item.label}
                         onClick={() => {
                           setIsOpen(false);
-                          // Increased delay and smoother transition
                           setTimeout(() => {
-                            item.href.startsWith("#") &&
-                              scrollToSection(item.href.replace("#", ""));
+                            scrollToSection(item.href.replace("#", ""));
                           }, 400);
                         }}
                         className="w-full justify-center text-lg transition-all duration-200 hover:bg-accent"
                         aria-label={`Navigate to ${item.label} section`}
                       >
                         {item.label}
-                      </a>
-                    </Link>
+                      </button>
+                    ) : (
+                      <Link
+                        key={item.label}
+                        to={item.href}
+                        className="w-full justify-center text-lg transition-all duration-200 hover:bg-accent"
+                        aria-label={`Navigate to ${item.label} section`}
+                      >
+                        {item.label}
+                      </Link>
+                    )
                   ))}
                 </div>
               </SheetContent>
