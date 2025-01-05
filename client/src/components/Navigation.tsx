@@ -110,7 +110,8 @@ export default function Navigation() {
                       <Link
                         key={item.label}
                         to={item.href}
-                        className="w-full justify-center text-lg transition-all duration-200 hover:bg-accent"
+                        onClick={() => setIsOpen(false)}
+                        className="w-full block px-4 py-2 text-lg transition-all duration-200 hover:bg-accent text-left"
                         aria-label={`Navigate to ${item.label} section`}
                       >
                         {item.label}
