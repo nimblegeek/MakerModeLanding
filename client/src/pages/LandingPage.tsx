@@ -19,7 +19,6 @@ export default function LandingPage() {
         <Problem />
         <Products />
         <Process />
-        <Articles />
         <Pricing />
         <FAQ />
       </main>
