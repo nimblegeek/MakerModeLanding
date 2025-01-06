@@ -26,7 +26,7 @@ export default function ArticlesPage() {
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold">Articles</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Insights and guides from our development team
+              Insights and guides from the team
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
