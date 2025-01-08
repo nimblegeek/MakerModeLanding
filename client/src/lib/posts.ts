@@ -1,34 +1,28 @@
 
-import type { BlogPost } from '../types/blog';
+import { BlogPost } from '../types/blog';
 
-const mockPosts: BlogPost[] = [
+// This would be replaced by actual MDX imports in a proper build system
+const posts: BlogPost[] = [
   {
-    slug: 'getting-started',
-    title: 'Getting Started with Development',
-    date: '2024-01-15',
-    description: 'Learn the fundamentals of modern web development.',
-    content: 'This is a comprehensive guide to getting started with web development...'
+    slug: 'example-article',
+    title: "Your Article Title",
+    date: "2024-03-21",
+    description: "A brief description of your article",
+    content: "Example content"
   },
   {
-    slug: 'best-practices',
-    title: 'Web Development Best Practices',
-    date: '2024-01-20',
-    description: 'Essential practices for writing clean, maintainable code.',
-    content: 'In this article, we explore the best practices for modern web development...'
-  },
-  {
-    slug: 'advanced-techniques',
-    title: 'Advanced Development Techniques',
-    date: '2024-01-25',
-    description: 'Take your development skills to the next level.',
-    content: 'Discover advanced techniques used by professional developers...'
+    slug: 'first-post',
+    title: "First Blog Post",
+    date: "2024-03-20",
+    description: "This is our first blog post",
+    content: "First post content"
   }
 ];
 
 export function getAllPosts(): BlogPost[] {
-  return mockPosts.sort((a, b) => (a.date < b.date ? 1 : -1));
+  return posts.sort((a, b) => (new Date(a.date) < new Date(b.date) ? 1 : -1));
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  return mockPosts.find(post => post.slug === slug);
+  return posts.find(post => post.slug === slug);
 }

@@ -15,6 +15,7 @@ createRoot(document.getElementById("root")!).render(
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/articles" element={<ArticlesPage />} />
+          <Route path="/articles/:slug" element={<ArticlePage />} />
           <Route path="*" element={<div>404 Page Not Found</div>} />
         </Routes>
       </BrowserRouter>
