@@ -7,6 +7,7 @@ import { SWRConfig } from "swr";
 import { fetcher } from "./lib/fetcher";
 import LandingPage from "./pages/LandingPage";
 import ArticlesPage from "./pages/ArticlesPage";
+import ArticlePage from "./pages/ArticlePage";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
