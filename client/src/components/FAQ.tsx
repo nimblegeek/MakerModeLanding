@@ -63,8 +63,10 @@ export default function FAQ() {
                 I use a variety of tools depending on the complexity and I try
                 to keep it simple. I have a go-to stack for most projects, but I
                 am also happy to use whatever tools and frameworks needed for
-                each project. Most web apps are built using React and Tailwind
-                UI.
+                each project. Most projects are built using Rails thanks to its
+                full-stack capability. It's also my go-to stack since it
+                shortens the dev cycles and there are less trivial decisions to
+                make. Convention over configuration. This saves time and money.
               </AccordionContent>
             </AccordionItem>
 
