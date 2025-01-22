@@ -13,28 +13,39 @@ export default function Hero() {
           className="space-y-6"
         >
           <h1 className="text-6xl font-bold leading-[1.2] bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-            A human developer agency with an edge
+            A tech partner with a twist
           </h1>
           <p className="text-lg md:text-lg text-muted-foreground max-w-xl mx-auto">
-            We help small businesses build{" "}
+            We help small businesses and startups ship{" "}
             <motion.span
-              initial={{ backgroundColor: "rgba(87, 80, 90, 0)" }}
-              animate={{ backgroundColor: "rgba(87, 80, 90, 0.2)" }}
+              initial={{
+                backgroundColor: "rgba(18, 255, 255, 1)",
+                borderRadius: "50%",
+              }}
+              animate={{
+                backgroundColor: "rgba(18, 255, 255, 1)",
+                borderRadius: "10%",
+              }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="px-1 rounded"
+              className="px-1 bg-brush-stroke"
             >
-              better software
+              better software, fast.
             </motion.span>{" "}
-            and become more{" "}
+            Go from idea to launch,{" "}
             <motion.span
-              initial={{ backgroundColor: "rgba(87, 80, 90, 0)" }}
-              animate={{ backgroundColor: "rgba(87, 80, 90, 0.2)" }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-              className="px-1 rounded"
+              initial={{
+                backgroundColor: "rgba(18, 255, 255, 1)",
+                borderRadius: "50%",
+              }}
+              animate={{
+                backgroundColor: "rgba(18, 255, 255, 1)",
+                borderRadius: "10%",
+              }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="px-1 bg-brush-stroke"
             >
-              profitable
-            </motion.span>
-            . Go from idea to launch fast, without crushing your budget.
+              without crushing your budget.
+            </motion.span>{" "}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button

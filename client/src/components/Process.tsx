@@ -53,7 +53,12 @@ export default function Process() {
           className="grid md:grid-cols-3 gap-6"
         >
           {steps.map((step, index) => (
-            <div key={index} className="bg-card rounded-lg border p-6">
+            <motion.div
+              key={index}
+              className="bg-card rounded-lg border p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              initial={{ scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+            >
               <div className="flex items-center gap-3 mb-4">
                 <motion.div
                   initial={{ scale: 0.8 }}
@@ -65,7 +70,7 @@ export default function Process() {
                 <h3 className="text-xl font-semibold">{step.title}</h3>
               </div>
               <p className="text-muted-foreground">{step.description}</p>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>
