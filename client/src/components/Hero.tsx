@@ -19,11 +19,11 @@ export default function Hero() {
             We help small businesses and startups ship{" "}
             <motion.span
               initial={{
-                backgroundColor: "rgba(18, 255, 255, 1)",
+                backgroundColor: "rgba(18, 255, 255, 0.6)",
                 borderRadius: "50%",
               }}
               animate={{
-                backgroundColor: "rgba(18, 255, 255, 1)",
+                backgroundColor: "rgba(18, 255, 255, 0.6)",
                 borderRadius: "10%",
               }}
               transition={{ delay: 0.5, duration: 0.8 }}
@@ -34,11 +34,11 @@ export default function Hero() {
             Go from idea to launch,{" "}
             <motion.span
               initial={{
-                backgroundColor: "rgba(18, 255, 255, 1)",
+                backgroundColor: "rgba(18, 255, 255, 0.6)",
                 borderRadius: "50%",
               }}
               animate={{
-                backgroundColor: "rgba(18, 255, 255, 1)",
+                backgroundColor: "rgba(18, 255, 255, 0.6)",
                 borderRadius: "10%",
               }}
               transition={{ delay: 0.5, duration: 0.8 }}

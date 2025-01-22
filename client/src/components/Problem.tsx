@@ -3,10 +3,10 @@ import { Check, AlertCircle, Rocket } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const benefits = [
-  "Get fast feedback from your customers",
+  "Get a technical partnership",
   "Pay for work that matters",
-  "Become profitable",
-  "Avoid the hyperscale trap",
+  "Ship software that make impact",
+  "Resolve technical complexity",
 ];
 
 export default function Problem() {
@@ -21,10 +21,10 @@ export default function Problem() {
           className="text-center mb-12"
         >
           <h2 className="text-5xl md:text-6xl font-bold leading-[1.17]">
-            Stuck in long development cycles?
+            Stuck with technical complexity?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Go from idea to launch in days, not months.
+            Go from idea to launch fast, and focus more on your business.
           </p>
         </motion.div>
 
