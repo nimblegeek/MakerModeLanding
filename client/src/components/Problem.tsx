@@ -3,10 +3,10 @@ import { Check, AlertCircle, Rocket } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const benefits = [
-  "Get a technical partnership",
+  "Get a technical partner",
   "Pay for work that matters",
   "Ship software that make impact",
-  "Resolve technical complexity",
+  "Focus on your core business",
 ];
 
 export default function Problem() {
@@ -64,16 +64,24 @@ export default function Problem() {
               <div className="space-y-3 text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <AlertCircle className="w-5 h-5 flex-shrink-0" />
-                  <p className="leading-relaxed">Budget overspent</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
-                  <p className="leading-relaxed">Never ending projects</p>
+                  <p className="leading-relaxed">No technical partner</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <AlertCircle className="w-5 h-5 flex-shrink-0" />
                   <p className="leading-relaxed">
-                    Feeling ripped off from big tech companies
+                    No feedback & budget overspent
+                  </p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                  <p className="leading-relaxed">
+                    Hopeless search for co-founders
+                  </p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                  <p className="leading-relaxed">
+                    Feeling ripped off from big tech
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
@@ -95,6 +103,10 @@ export default function Problem() {
                 <div className="flex items-center gap-2">
                   <Rocket className="w-5 h-5 flex-shrink-0" />
                   <p className="leading-relaxed">Rapid feedback</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Rocket className="w-5 h-5 flex-shrink-0" />
+                  <p className="leading-relaxed">Shipping the right software</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <Rocket className="w-5 h-5 flex-shrink-0" />
