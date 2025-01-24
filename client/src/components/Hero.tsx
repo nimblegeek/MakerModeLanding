@@ -16,36 +16,37 @@ export default function Hero() {
             A tech partner with a twist
           </h1>
           <p className="text-lg md:text-lg text-muted-foreground max-w-xl mx-auto">
-            We help small businesses and startups ship{" "}
+            We help founders and small businesses ship{" "}
             <motion.span
               initial={{
-                backgroundColor: "rgba(18, 255, 255, 0.6)",
+                backgroundColor: "rgba(255, 222, 0, 1)",
                 borderRadius: "50%",
               }}
               animate={{
-                backgroundColor: "rgba(18, 255, 255, 0.6)",
+                backgroundColor: "rgba(255, 222, 0, 1)",
                 borderRadius: "10%",
               }}
               transition={{ delay: 0.5, duration: 0.8 }}
               className="px-1 bg-brush-stroke"
             >
-              better software, fast.
+              MVPs & good software.
             </motion.span>{" "}
-            Go from idea to launch,{" "}
+            Go from
             <motion.span
               initial={{
-                backgroundColor: "rgba(18, 255, 255, 0.6)",
+                backgroundColor: "rgba(255, 222, 0, 1)",
                 borderRadius: "50%",
               }}
               animate={{
-                backgroundColor: "rgba(18, 255, 255, 0.6)",
+                backgroundColor: "rgba(255, 222, 0, 1)",
                 borderRadius: "10%",
               }}
               transition={{ delay: 0.5, duration: 0.8 }}
               className="px-1 bg-brush-stroke"
             >
-              without crushing your budget.
+              idea to launch fast,
             </motion.span>{" "}
+            without having to live on ramen noodles.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
