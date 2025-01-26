@@ -15,8 +15,8 @@ export default function Hero() {
           <h1 className="text-6xl font-bold leading-[1.2] bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             A tech partner with a twist
           </h1>
-          <p className="text-lg md:text-lg text-muted-foreground max-w-xl mx-auto">
-            We help founders and small businesses ship{" "}
+          <p className="text-xl md:text-xl text-muted-foreground max-w-xl mx-auto">
+            We help founders and small businesses go from{" "}
             <motion.span
               initial={{
                 backgroundColor: "rgba(255, 222, 0, 1)",
@@ -29,22 +29,7 @@ export default function Hero() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="px-1 bg-brush-stroke"
             >
-              MVPs & good software.
-            </motion.span>{" "}
-            Go from
-            <motion.span
-              initial={{
-                backgroundColor: "rgba(255, 222, 0, 1)",
-                borderRadius: "50%",
-              }}
-              animate={{
-                backgroundColor: "rgba(255, 222, 0, 1)",
-                borderRadius: "10%",
-              }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="px-1 bg-brush-stroke"
-            >
-              idea to launch fast,
+              idea to launch,
             </motion.span>{" "}
             without having to live on ramen noodles.
           </p>

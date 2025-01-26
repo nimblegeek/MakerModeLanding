@@ -24,7 +24,7 @@ export default function Problem() {
             Stuck with technical complexity?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Go from idea to launch fast, and focus more on your business.
+           Compress the complexity of your project with a technical partner.
           </p>
         </motion.div>
 
@@ -68,9 +68,7 @@ export default function Problem() {
                 </div>
                 <div className="flex items-center gap-2">
                   <AlertCircle className="w-5 h-5 flex-shrink-0" />
-                  <p className="leading-relaxed">
-                    No feedback & budget overspent
-                  </p>
+                  <p className="leading-relaxed">Stuck in the claws of VC's</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <AlertCircle className="w-5 h-5 flex-shrink-0" />
@@ -81,13 +79,13 @@ export default function Problem() {
                 <div className="flex items-center gap-2">
                   <AlertCircle className="w-5 h-5 flex-shrink-0" />
                   <p className="leading-relaxed">
-                    Feeling ripped off from big tech
+                    Budget overspent on complex technologies
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
                   <AlertCircle className="w-5 h-5 flex-shrink-0" />
                   <p className="leading-relaxed">
-                    Stuck in long meetings with the wrong people
+                    Stuck with expensive and complex SaaS boilerplates
                   </p>
                 </div>
               </div>

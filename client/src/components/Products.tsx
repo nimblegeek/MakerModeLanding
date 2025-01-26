@@ -12,29 +12,19 @@ import {
 
 const products = [
   {
-    title: "Tech Stacks",
-    description:
-      "Get your full-stack ecosystem including tools to run and deploy.",
-    icon: Blocks,
-    features: [
-      "Boilerplate code & database",
-      "Define and run your app(s) with Docker compose",
-      "Cloud hosting through DigitalOcean",
-    ],
-    longDescription: "Our Tech Stacks solution provides everything you need to get started with your project. We set up the complete development environment, including database configuration, deployment pipelines, and all necessary tools for efficient development.",
-  },
-  {
     title: "SaaS Boilerplate",
     description:
       "Full-stack app ready for SaaS launch. Tweak and customize to your needs and taste.",
     icon: Code2,
     features: [
-      "Database",
+      "Full-stack ",
+      "Database with SQLite",
       "Authentication",
       "Payment integration",
-      "Tailwind UI components",
+      "Tailwind",
     ],
-    longDescription: "Launch your SaaS product faster with our comprehensive boilerplate. It includes all essential features like user authentication, subscription management, and a polished UI built with Tailwind. Just customize it to match your brand and add your unique features.",
+    longDescription:
+      "Launch your SaaS product faster with our comprehensive boilerplate. It includes all essential features like user authentication, subscription management, and a polished UI built with Tailwind. Just customize it to match your brand and add your unique features.",
   },
   {
     title: "Custom MVP",
@@ -47,7 +37,8 @@ const products = [
       "Incremental development",
       "Launch and training material",
     ],
-    longDescription: "Turn your unique idea into reality with our custom MVP development service. We work closely with you to choose the right technology stack, implement your features iteratively, and provide comprehensive support throughout the journey.",
+    longDescription:
+      "Turn your unique idea into reality with our custom MVP development service. We work closely with you to choose the right technology stack, implement your features iteratively, and provide comprehensive support throughout the journey.",
   },
 ];
 
@@ -63,11 +54,10 @@ export default function Products() {
           className="text-center mb-12"
         >
           <h2 className="text-5xl md:text-6xl font-bold">
-            Tech Stacks & Boilerplates
+            Running solo?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Choose your tech-stack or boilerplate and be ready to launch your
-            MVP in days. Or subscribe and launch new features incrementally.
+            Get your product to market faster with a full-stack boilerplate or g
           </p>
         </motion.div>
 
@@ -110,7 +100,9 @@ export default function Products() {
                   </Card>
                 </DialogTrigger>
                 <DialogContent aria-describedby="dialog-description">
-                  <div id="dialog-description" className="sr-only">Product details and features</div>
+                  <div id="dialog-description" className="sr-only">
+                    Product details and features
+                  </div>
                   <DialogHeader className="text-left">
                     <DialogTitle className="text-2xl flex items-center gap-2">
                       <product.icon className="h-6 w-6" />
